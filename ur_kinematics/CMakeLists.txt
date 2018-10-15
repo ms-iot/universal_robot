@@ -28,12 +28,15 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(ur3_kin src/ur_kin.cpp)
 set_target_properties(ur3_kin PROPERTIES COMPILE_DEFINITIONS "UR3_PARAMS")
+set_target_properties(ur3_kin PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 add_library(ur5_kin src/ur_kin.cpp)
 set_target_properties(ur5_kin PROPERTIES COMPILE_DEFINITIONS "UR5_PARAMS")
+set_target_properties(ur5_kin PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 add_library(ur10_kin src/ur_kin.cpp)
 set_target_properties(ur10_kin PROPERTIES COMPILE_DEFINITIONS "UR10_PARAMS")
+set_target_properties(ur10_kin PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 
 add_library(ur3_moveit_plugin src/ur_moveit_plugin.cpp)
